@@ -6,6 +6,7 @@ const transactionHistoryController = require('../controller/transactionHistoryCo
 const reviewController = require('../controller/reviewController')
 const chatController = require('../controller/chatController')
 const loginController = require('../controller/loginController')
+const upload = require('../middleware/upload');
 
 const router = Router()
 
@@ -20,10 +21,10 @@ router.put(("/usuarios/:id"), userController.updateUser)
 router.delete(("/usuarios/:id"), userController.deleteUser)
 
 // Para operações relacionadas a livros
-router.get(("/livros"), bookController.getAllBooks) 
-router.post(("/livros"), bookController.createBook)
-router.put(("/livros/:id"), bookController.updateBook)
-router.delete(("/livros/:id"), bookController.deleteBook)
+router.get('/livros', bookController.getAllBooks);
+router.post('/livros', upload.single('imagem'), bookController.createBook);
+router.put('/livros/:id', upload.single('imagem'), bookController.updateBook);
+router.delete('/livros/:id', bookController.deleteBook);
 
 // Para operações relacionadas a trocas
 router.get(("/trocas"), tradeController.getAllTrades)

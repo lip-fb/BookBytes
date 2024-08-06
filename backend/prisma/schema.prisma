@@ -32,6 +32,7 @@ model livros {
   autor          String    @db.VarChar(255)
   genero         String   @db.VarChar(255)
   ano_publicacao Int
+  imagem         String?   @db.VarChar(255)
   usuarios       usuarios @relation(fields: [usuario_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
   trocas         trocas[]
 
