@@ -1,0 +1,28 @@
+### Obter todas as avaliações
+GET http://localhost:3000/avaliacoes
+Content-Type: application/json
+
+
+### Criar uma nova avaliação
+POST http://localhost:3000/avaliacoes
+Content-Type: application/json
+
+{
+  "usuario_id": 7,
+  "nota": 5,
+  "comentario": "Ótimo livro!"
+}
+
+### Atualizar uma avaliação existente
+PUT http://localhost:3000/avaliacoes/1
+Content-Type: application/json
+
+{
+  "usuario_id": 7,
+  "nota": 4,
+  "comentario": "Livro muito bom, mas poderia ser melhor."
+}
+
+### Deletar uma avaliação
+DELETE http://localhost:3000/avaliacoes/1
+Content-Type: application/json

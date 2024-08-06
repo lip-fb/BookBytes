@@ -1,0 +1,31 @@
+### Obter todas as trocas
+GET http://localhost:3000/trocas
+Content-Type: application/json
+
+
+### Criar uma nova troca
+POST http://localhost:3000/trocas
+Content-Type: application/json
+
+{
+  "usuario_id": 7,
+  "livro_id": 4,
+  "status": "pendente"
+}
+
+### Atualizar uma troca existente
+PUT http://localhost:3000/trocas/1
+Content-Type: application/json
+
+{
+  "usuario_id": 7,
+  "livro_id": 4,
+  "status": "aprovado"
+}
+
+
+
+### Deletar uma troca
+DELETE http://localhost:3000/trocas/1
+Content-Type: application/json
+
