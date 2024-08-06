@@ -1,0 +1,42 @@
+### Cadastrar novo usuário
+POST http://localhost:3000/usuarios
+Content-Type: application/json
+
+{
+    "nome": "Felipe B",
+    "email": "fee@email.com",
+    "senha": "1234",
+    "reputacao": 100
+}
+
+### Obter todos os usuários
+GET http://localhost:3000/usuarios
+
+### Atualizar um usuário existente
+PUT http://localhost:3000/usuarios/1
+Content-Type: application/json
+
+{
+    "nome": "Luci Name",
+    "email": "m@gmail.com",
+    "senha": "12345",
+    "reputacao": 100
+}
+
+### Deletar um usuário existente
+DELETE http://localhost:3000/usuarios/1
+
+
+### Cadastrar novo usuario
+
+POST http://localhost:3000/usuarios
+Content-Type: application/json
+
+{
+    "nome": "Luci Name",
+    "email": "m@gmail.com",
+    "senha": "12345",
+    "reputacao": 100
+}
+
+

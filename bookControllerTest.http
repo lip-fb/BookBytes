@@ -1,0 +1,33 @@
+### buscar todos os livros
+GET http://localhost:3000/livros
+Content-Type: application/json
+
+
+### Criar um cadastro de livro
+POST http://localhost:3000/livros
+Content-Type: application/json
+
+{
+  "usuario_id": 6,
+  "titulo": "A Causa",
+  "autor": "J.D. Salinger",
+  "genero": "Fiction",
+  "ano_publicacao": 1951
+}
+
+
+### Atualizar livro
+PUT http://localhost:3000/livros/3
+Content-Type: application/json
+
+{
+  "titulo": "Heathens",
+  "autor": "Twenty one pilots",
+  "genero": "Fiction",
+  "ano_publicacao": 1960
+}
+
+
+### Deletar livro
+DELETE http://localhost:3000/livros/1
+Content-Type: application/json

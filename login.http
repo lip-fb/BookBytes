@@ -1,0 +1,19 @@
+### Login com senha correta
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "email": "fee@email.com",
+  "senha": "1234"
+}
+
+### Login com senha incorreta
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "email": "fee@email.com",
+  "senha": "12345"
+}
+
+
